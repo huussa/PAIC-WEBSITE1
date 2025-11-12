@@ -1,0 +1,96 @@
+/* الألوان الأساسية للمشروع */
+:root {
+    --primary-color: #1A237E; /* Deep Navy Blue */
+    --secondary-color: #673AB7; /* Purple */
+    --accent-color: #ffffff; /* White (for text) */
+    --background-color: #0d123c; /* Very Dark Background */
+}
+/* إعدادات الجسم والخطوط الأساسية */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--accent-color);
+    direction: ltr; /* Set direction Left-to-Right for English content */
+}
+/* -------------------- Navigation Bar -------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.logo-container {
+    /* وضع الشعار في اليسار */
+    margin-right: auto;
+}
+
+.logo-container .logo {
+    height: 50px; /* Logo size */
+}
+.nav-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+.nav-links a:hover, .nav-links a.active {
+    color: #9c27b0; /* Light Purple for hover/active */
+    border-bottom: 2px solid #9c27b0;
+}
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.search-box input {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+.search-box button {
+    padding: 8px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+/* -------------------- Hero Section -------------------- */
+.hero-section {
+    height: 70vh; /* Section height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 50px 20px;
+}
+.hero-content h1 {
+    font-size: 4em; /* PAIC CLUB in large font */
+    margin: 0;
+    color: var(--accent-color);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.hero-content .subtitle {
+    font-size: 1.5em;
+    color: #BBDEFB; /* Light Blue */
+    margin-top: 10px;
+}
+
+/* -------------------- Footer -------------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    font-size: 0.9em;
+}
