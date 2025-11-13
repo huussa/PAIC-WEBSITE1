@@ -5,6 +5,12 @@
     --accent-color: #ffffff; /* White (for text) */
     --background-color: #0d123c; /* Very Dark Background */
 }
+/* إعدادات الارتفاع الأساسي للصفحة */
+html, body {
+    height: 100%;  /* يجعل الجسم كامل ارتفاع الصفحة */
+    margin: 0;     /* إزالة الهوامش الافتراضية */
+}
+
 /* إعدادات الجسم والخطوط الأساسية */
 body {
     font-family: Arial, sans-serif;
@@ -13,6 +19,12 @@ body {
     background-color: var(--background-color);
     color: var(--accent-color);
     direction: ltr; /* Set direction Left-to-Right for English content */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Allows main to grow and fill available space */
 }
 /* -------------------- Navigation Bar -------------------- */
 .navbar {
