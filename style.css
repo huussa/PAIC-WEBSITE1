@@ -1,17 +1,16 @@
-/* الألوان الأساسية للمشروع */
+/* -------------------- Main Color Variables -------------------- */
 :root {
     --primary-color: #1A237E; /* Deep Navy Blue */
     --secondary-color: #673AB7; /* Purple */
     --accent-color: #ffffff; /* White (for text) */
     --background-color: #0d123c; /* Very Dark Background */
 }
-/* إعدادات الارتفاع الأساسي للصفحة */
+/* -------------------- Global Styles -------------------- */
 html, body {
-    height: 100%;  /* يجعل الجسم كامل ارتفاع الصفحة */
-    margin: 0;     /* إزالة الهوامش الافتراضية */
+    height: 100%;  /* full height */
+    margin: 0; /* default margin removal */
 }
-
-/* إعدادات الجسم والخطوط الأساسية */
+/* -------------------- Body Styles -------------------- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -22,28 +21,67 @@ body {
     display: flex;
     flex-direction: column;
 }
+/* -------------------- Burger Menu Button -------------------- */
+.humburger-menu-icon {
+    display: none; /* Hidden by default, shown on small screens */
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    background: none;}
+.humburger-menu-icon span {
+    background-color: var(--accent-color);
+    height: 4px;
+    position: absolute;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    width: 100%;
+    left: 0;
+}
+.humburger-menu-icon span:nth-child(1) {
+    top: 0;
+}
+.humburger-menu-icon span:nth-child(2) {
+    top: 10px;
+}
+.humburger-menu-icon span:nth-child(3) {
+    top: 20px;
+}
 
-main {
-    flex: 1; /* Allows main to grow and fill available space */
+.humburger-menu-icon.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+    background-color: #9c27b0;
+}
+.humburger-menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+.humburger-menu-icon.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+    background-color: #9c27b0;
 }
 /* -------------------- Navigation Bar -------------------- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 15px 75px;
     background-color: var(--primary-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 .logo-container {
-    /* وضع الشعار في اليسار */
-    margin-right: auto;
+    /* Align logo to the left */
+    margin: 30px;
 }
-
+.nav-links {
+    display: flex;
+    align-items: center;
+}
 .logo-container .logo {
     height: 50px; /* Logo size */
 }
 .nav-links a {
+    text-decoration: none;
     color: var(--accent-color);
     text-decoration: none;
     margin: 0 15px;
@@ -55,7 +93,7 @@ main {
     color: #9c27b0; /* Light Purple for hover/active */
     border-bottom: 2px solid #9c27b0;
 }
-/* Search Box */
+/* -------------------- Search Box -------------------- */
 .search-box {
     display: flex;
     align-items: center;
@@ -74,6 +112,10 @@ main {
     border: none;
     border-radius: 0 20px 20px 0;
     cursor: pointer;
+}
+/* -------------------- Main Section -------------------- */
+main {
+    flex: 1; /* Allows main to grow and fill available space */
 }
 /* -------------------- Hero Section -------------------- */
 .hero-section {
